@@ -9,7 +9,8 @@ const adminData = require('./admin');
 // GET method uses exact path
 router.get("/", (req, res, next) => {
   console.log('Shop js => ', adminData.products);
-  res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+  // res.sendFile(path.join(__dirname, '../', 'views', 'shop.html'));
+  res.render('shop');
 });
 
 module.exports = router;
