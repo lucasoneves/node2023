@@ -1,10 +1,15 @@
 const express = require("express");
 const bodyParser = require('body-parser')
 const app = express();
+const engine = require('express-handlebars')
 
 app.set('view engine', 'pug');
 app.engine('pug', require('pug').__express)
 app.set('views', 'views');
+
+app.engine('hbs', engine());
+app.set('view engine', 'hbs');
+app.set('views', './views');
 
 const path = require('path');
 
