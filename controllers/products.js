@@ -20,5 +20,9 @@ exports.postAddProduct = (req, res, next) => {
 };
 
 exports.getAddProducts = (req, res, next) => {
-    res.render('add-product', {pageTitle: 'Add Product', path: '/add-product'});
-  }
+  res.render("add-product", { pageTitle: "Add Product", path: "/add-product" });
+};
+
+exports.get404Page = (req, res, next) => {
+  res.status(404).render("404", { pageTitle: "Page Not Found" });
+};
