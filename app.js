@@ -11,7 +11,7 @@ const path = require("path");
 
 const adminData = require("./routes/admin");
 const shopRoutes = require("./routes/shop");
-const { get404Page } = require("./controllers/products");
+const { get404Page } = require("./controllers/error");
 
 app.use(bodyParser.urlencoded({ extended: false })); // Body parsing
 
